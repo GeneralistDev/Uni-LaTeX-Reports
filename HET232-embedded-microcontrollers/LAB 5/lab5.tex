@@ -4,6 +4,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{pdflscape}
+\usepackage{graphicx}
 
 \lstdefinestyle{customc}{
   belowcaptionskip=1\baselineskip,
@@ -38,6 +39,15 @@ The basic clock functionality is mostly in the digital\_clock program module, ho
 \maketitle
 \section{Alarm Function}
 The alarm can be set using the 5-way switch on the LCD board in the same way as setting the time. music\_box.h provides interface accessor functions for the other modules to use to change the current note being played. To play sound, the module outputs a square wave by toggling the pin associated with the FlexTimer Module 0 Channel 3. The speed at which this happens is dependent on the half period of the desired wave in timer ticks, which is calculated in this module. Interrupts are scheduled at half periods and the previous interrupt flag is cleared on the channel which interrupted. Channel 7 on the FlexTimer Module is configured to interrupt at set intervals and check whether the current note has been playing long enough. 
+
+\newpage
+\begin{figure}
+\centering
+\includegraphics[width=150mm]{module_diagram.png}
+\caption{Module Diagram}
+\label{overflow}
+\end{figure}
+
 
 \begin{landscape}
 \section{source code}
@@ -575,8 +585,6 @@ typedef struct
 
 void setup_song(void);
 
-void FTM0_IRQ_Handler(void);
-
 void setup_ftm(void);
 
 void set_tempo(int bpm);
@@ -741,7 +749,7 @@ void next_note(void)
  *  
  *  @param Note index
  */
-void set_current_note(int index)
+static void set_current_note(int index)
 {
 	current_note = index;
 	current_note_remaining = quarter_note_length * song[current_note].length;
@@ -752,7 +760,7 @@ void set_current_note(int index)
  * 
  *  @param frequency (Hz)
  */
-int get_note_half_period(int freq)
+static int get_note_half_period(int freq)
 {
 	double dfreq = freq;
 	if (freq == 1)

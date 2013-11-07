@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="12.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>40</x>
+      <y>120</y>
+      <w>170</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+digital_clock
+--
+Variables
+- time
+- alarm_time
+- alarm_status
+--
+Accessor Functions
+- get_time()
+- set_time()
+- set_alarm_status()
+- get_alarm_status()
+- get_alarm_time()
+- set_alarm_time()
+--
+Other Functions
+- setup_rtc()
+- draw_time()
+- reset_alarm()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>210</x>
+      <y>40</y>
+      <w>210</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>
+main
+--
+Constants
+- TEMPO
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>230</x>
+      <y>120</y>
+      <w>170</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+music_box
+--
+Variables
+- quarter_note_length
+- quarter_note_remaining
+- current_note
+- song[]
+--
+Accessor Functions
+- set_tempo()
+--
+Other Functions
+- setup_song()
+- setup_ftm()
+- next_note()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>420</x>
+      <y>120</y>
+      <w>170</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;module&gt;&gt;
+five_switch
+--
+Variables
+- setup_switch_state
+--
+Accessor Functions
+- getCentreSwitch()
+- getNorthSwitch()
+- getSouthSwitch()
+- getEastSwitch()
+- getWestSwitch()
+- set_switch_state()
+- get_switch_state()
+--
+Other Functions
+- user_time_setup()
+- user_alarm_setup()</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
