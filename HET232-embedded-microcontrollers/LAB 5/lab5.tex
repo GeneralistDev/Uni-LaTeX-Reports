@@ -1,11 +1,42 @@
 \documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{customc}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=C,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green!20!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\lstset{escapechar=@,style=customc}
 
 \title{Embedded Microcontrollers HET232 \\ Experiment 5}
-\author{Daniel Parker \\ 971328X \and Mustafa Rizvi \\ 11111111}
+\author{Daniel Parker \\ 971328X \and Mustafa Rizvi \\ 1754270}
 \date{\today}
 
 \begin{document}
 \maketitle
 \section{Aim}
-This report outlines the design processes and decisions involved in designing a digital alarm clock program for the Freescale FRDM-K20D50M with LCD module.
+This experiment aimed to develop an embedded C program to run on the Freescale FRDM-K20D50M MCU with LCD module. The program contains two parts; a clock which utilised the Real-Time Clock (RTC) hardware feature and draws the time in either digital or analog format on the LCD, and a musical alarm which utilises the FlexTimer Module (FTM) to create PWM signals to a piezoelectric speaker. The two parts must utilise interrupts so that they can run concurrently.
+\maketitle
+\section{Code}
+\begin{lstlisting}
+#include <stdio.h>
+
+int main(void)
+{
+
+	return 0;
+}
+\end{lstlisting}
 \end{document}
