@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=3cm]{geometry}
+
+\title{Individual Retrospective Report}
+\author{Daniel Parker \\ 971328X}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%% Contributions %%%%%%%%%%%%%%%
+\section{Contributions}
+\begin{itemize}
+	\item{Program architecture design}
+	\item{Program architecture code}
+	\item{Inference engine code}
+	\item{Style factory}
+	\item{Layout Factory}
+	\item{Final region detection code}
+	\item{File output structure and xml formatting code}
+	\item{Product build}
+	\item{Build instructions}
+	\item{Installation requirements}
+\end{itemize}
+
+%%%%%%%%%%%%%%% Learning %%%%%%%%%%%%%%%
+\maketitle
+\section{Learning}
+\subsection{Describe, Analyse and Discuss a small software project scope}
+In the first 3 weeks we spent some very valuable time analysing the problem of gathering information from an Android app screenshot to be able to generate XML style, layout and theme files and recreate that design in the Android SDK. My interpretation of the scope of this project was outlined in my first oral presentation from week two and furthermore in my second oral presentation. I felt that I quickly understood a lot of the technicalities of the problem and never in the twelve weeks did I doubt my initial understanding of the scope.
+
+\subsection{Plan and Prioritise a small software project deliverables and milestones}
+At the beginning of every two week iteration the team collaboratively chose what we would like to achieve in the next iteration. We spent an afternoon breaking our goals down into tasks with priorites which satisfied the needs of our software project. I feel that I'm getting better at the estimation of task durations and this will be a valuable skill to have in the future.
+
+\subsection{Analyse, Design, Build and Validate a small software system in a small team}
+The team worked iteratively to design and build our software system. We spent the first two weeks analysing the problem and the next two weeks spiking some of the challenging parts so that we could fill a technical skill gap. The rest of the iterations were completed as a team. I feel that my understanding of the technical problem was slightly more advanced than the rest of the team and this often led to my suggestions becoming the iteration goals. I'm not sure that this was of much benefit to me but I hope that the team achieved more by having my suggestions.
+
+\subsection{Demonstrate awareness and understanding of ethical and professional practices in engineering a software system and working with a client}
+I feel that this area is one of the more difficult ones to cover as the engineer - client relationship was simulated and therefore didn't feel very realistic. We did however get a more realistic experience by having to do oral presentations and present our product at the technical showcase in the city.
+
+\subsection{Use appropriate tools for engineering a software system, including basic project management and team support infrastructure}
+We used a variety of tools to assist us in collaborating on this software project including:
+\begin{itemize}
+	\item{git - Version control}
+	\item{bitbucket - Repository hosting}
+	\item{bitbucket - Issue tracker}
+	\item{Google+ - Meeting scheduling and discussion board}
+	\item{Google Hangouts - Video conferencing and instant messaging}
+\end{itemize}
+
+%%%%%%%%%%%%%%% Issues %%%%%%%%%%%%%%%
+\section{Issues}
+I didn't struggle with any of the technical aspects during the project, however I have been having continuing issues with the attitudes of my team members. On two occasions I have had to take full programming responsibility for the development of major sections of the program, because some team members neglected to begin working at all on their tasks. Without my input we wouldn't have shipped the first iteration product as was what occured at the end of the second iteration, because I didn't want to do the other's work. 
+
+In the past two weeks I have been having social issues with Glareh, as she has taken it upon herself to treat me in a most unprofessional manner. I'd like to fix the situation but I feel as if it is a complete waste of time and has occurred in the past as well.
+
+%%%%%%%%%%%%%%% Reflections %%%%%%%%%%%%%%%
+\section{Reflections}
+\subsection{Project Management}
+I felt that this is the area we had the most issues in over the twelve weeks. We had communication breakdowns all through the semester between Huan and the rest of the team. Technical communication was lacking and on multiple occasions team members spent time developing things that they never should have spent time on. Our task estimation improved over the course of the project, however the communication issues still to this day.
+
+\subsection{Documentation}
+Source code has been documented but it wasn't actually completed until the final few weeks of development. More ongoing documentation in the form of comments and verbose git commits would improve on this a lot.
+
+\subsection{Source Code and its Control}
+Most of the team was very new to this and git isn't easy to learn initially. I'm lucky that I have some experience using git and was able to assist the team in learning the basics of that. The commit messages that have been used leave much to be desired. They often were very brief and didn't give much information about what had been changed. I know that I am guilty of this as well.
+
+\subsection{Requirements}
+The requirements we were given were fairly straight forward and didn't really play much part in the first half of the development. It wasn't until we begin designing the program architecture that the output requirements were taken into full account. We had some freedom in some areas (ie. the interface we chose to implement).
+
+\subsection{Development Tools / Libraries / Frameworks}
+As python is an interpreted language it makes it easy for people to use different development environments and just exchange scripts. In the end I just used a text editor, however my team members found it easier to use PyCharm because of it's code suggestions. We used the OpenCV image processing libraries to do our image analysis. Apart from compiling them, the libraries are fairly easy to use if you know the maths behind the functions.
+
+\subsection{Development Process}
+We used an iterative development process in this project. Every week we held a strictly structured team meeting to get status updates from everyone and address any issues. Every two weeks we also planned the next two week iteration goals and tasks. I think this works will in a lot of work environments but not so well in one where we end up prioritising other univeristy work over this work.
+
+\subsection{Final Software}
+The final software is a well structured program which analyses a set of images and returns the Android project \'res\' folder, xml layout and style files. The program has a functioning command line interface with a range of sytax options. A series of related documents will be shipped with the final product as well to help developers and users.
+
+\subsection{Architecture \& Design}
+The solution was designed such that a develop could read through the top level file and understand the general process of how the program worked. The program contained an inference engine which would infer style and layout information based on the input image/s.
+\end{document}
